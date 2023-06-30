@@ -40,6 +40,25 @@
 ![An image of the working directory, staging area, and repository.  There is an arrow labeled "checkout the project" pointing from the repository to the working direction, an arrow labeled "stage fixes" pointing from the working directory to the staging area, and an arrow labeled "commit" pointing from the staging area to the repository.](./images/git_local_areas.png)  
 from : https://git-scm.com/book/en/v2/Getting-Started-What-is-Git%3F
 
+#### Working Directory
+- This is the area you are working in
+- The changes you make here are not in the repository till you commit them
+- You can have untracked files 
+
+#### Check Status 
+This can be done with the ```git status``` command.
+
+![An image showing a call to "git status".  It shows files not staged and untracked files.](./images/status.png)
+
+#### Staging Area
+- This is where you have said what files you are getting ready to commit
+- They are still not in the repository
+- You just want to add the files relevant to the commit you are making.
+
+#### Move file to the staging area
+```git add <filename>```
+![An image showing the use of "git add", followed by "git status" showing the added file in green in the staging area.](./images/add.png)
+
 ## Create Repo
 
 ## Clone Repo
