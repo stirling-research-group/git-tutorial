@@ -2,6 +2,8 @@
 ## Table of content
 - [Do Ahead of Time](#do-ahead-of-time)
 - [Background](#background)
+    - [What's That](#whats-that)
+    - [Structure](#structure)
 - [Create Repo](#create-repo)
 - [Clone Repo](#clone-repo)
 - [Make changes](#make-changes)
@@ -35,7 +37,7 @@
 - Can be done totally locally but often uses a central repository (repo) so it is easier to collaborate.
 - Each system has its own repository which is a complete history of the changes that have been committed and can synchronize one system’s repo with the central repo.
 
-![An image of the working directory, staging area, and repository.  There is an arrow labeled "checkout the project" pointing from the repository to the working direction, an arrow labeled "stage fixes" pointing from the working directory to the staging area, and an arrow labeled "commit" pointing from the staging area to the repository.](git_local_areas.png)  
+![An image of the working directory, staging area, and repository.  There is an arrow labeled "checkout the project" pointing from the repository to the working direction, an arrow labeled "stage fixes" pointing from the working directory to the staging area, and an arrow labeled "commit" pointing from the staging area to the repository.](./images/git_local_areas.png)  
 from : https://git-scm.com/book/en/v2/Getting-Started-What-is-Git%3F
 
 ## Create Repo
