@@ -105,6 +105,7 @@ from: https://phoenixnap.com/kb/how-git-works
 
 #### Send update to the remote
 ```git push```
+- Many commits can be done prior to pushing
 
 TODO: add image
 
@@ -137,6 +138,22 @@ The demo will have 3 groups
     - Open github.com and create a repository
     
     ![An image of the github page showing the new button in the top right](./images/github_repo.png)
+    
+    - Initialize an existing local repository
+        ```
+        cd <location to make repo>
+        git init
+        git add .
+        git commit -m '<commit message>'
+        ```
+    - Connect the local repo to the remote
+        - Assumes the local is already initialized and has committed files, and the remote repo already exists
+        ```
+        git branch -M main
+        git remote add origin <git remote repo location>
+        git push -u origin main
+        ```
+    
 - **Secondary**
     - NONE
 - **Everyone**
