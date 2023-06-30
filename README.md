@@ -3,22 +3,32 @@
 - [Do Ahead of Time](#do-ahead-of-time)
 - [Background](#background)
     - [What's That](#whats-that)
-    - [Structure](#structure)
-- [Create Repo](#create-repo)
-- [Clone Repo](#clone-repo)
-- [Make changes](#make-changes)
-- [Status](#status)
-- [Add](#add)
-- [Commit](#commit)
-- [Push](#push)
-- [Fetch](#fetch)
-- [Pull](#pull)
-- [Merge](#merge)
-- [Conflicts](#conflicts)
-- [Branch](#branch)
-- [Checkout](#checkout)
-- [Merge Branch](#merge-branch)
-- [.gitignore](#gitignore)
+- [Structure](#structure)
+    - [Working Directory](#working-directory)
+        - [Check Status (status)](#check-status)
+    - [Staging Area](#staging-area)
+        - [Move File to the Staging Area (add)](#move-file-to-the-staging-area)
+    - [Local Repository](#local-repository)
+        - [Commit Files (commit)](#commit-files)
+        - [Repository Structure](#repository-structure)
+        - [Files not to use git for](#files-not-to-use-git-for)
+    - [Remote Repository](#remote-repository)
+        - [Send Update to the Remote (push)](#send-update-to-the-remote)
+        - [Update the Local Repo Based on the Remote Repo (fetch)](#update-the-local-repo-based-on-the-remote-repo)
+        - [Update the Working Directory from the Local Repository (merge)](#update-the-working-directory-from-the-local-Repository)
+        - [Fetch and Merge (pull)](#fetch-and-merge)
+- [Demo](#demo)
+    - [Create Repo](#create-repo)
+    - [Clone Repo](#clone-repo)
+    - [Update Remote Repository](#update-remote-repository)
+    - [Resolving Conflicts](#resolving-conflicts)
+- [gitignore](#gitignore)
+- [Remove Files from the Staged Area (rm)](#remove-files-from-the-staged-area)
+- [Replace a File in the Working Directory with the One in the Repo (restore)](#replace-a-file-in-the-working-directory-with-the-one-in-the-repo)
+- [Branches](#branches)
+    - [Checkout](#Checkout)
+    - [Merge Branch](#merge-branch)
+    
 ## Do ahead of time
 - Have the lab slack open for sharing link
 - Have a GitHub account with SSH Setup
@@ -52,7 +62,12 @@ from: https://git-scm.com/book/en/v2/Getting-Started-What-is-Git%3F
 - You can have untracked files 
 
 #### Check Status 
-This can be done with the ```git status``` command.
+```git status```
+Displays the status of the various files in the working directory.
+- Untracked files - Files that have not been added to the repository
+- Modified files - Files that have been changed
+- Deleted files - files that have been deleted from the working directory.
+- Staged files - Files that have been staged for a commit. 
 
 ![An image showing a call to "git status".  It shows files not staged and untracked files.](./images/status.png)
 
@@ -104,7 +119,7 @@ It has the same repository (when everyone is updated), as the remote repositorie
 
 from: https://phoenixnap.com/kb/how-git-works
 
-#### Send update to the remote
+#### Send Update to the Remote
 ```git push```
 - Many commits can be done prior to pushing
 
@@ -212,7 +227,7 @@ If you don't already have files to add you can also just clone repository, rathe
         git pull
         ```
     
-    We should each now have everyone's files in our working directory. without any problems.
+    We should each now have everyone's files in our working directory without any problems.
 
 ### Resolving Conflicts
 - **Secondary**
@@ -236,12 +251,20 @@ If you don't already have files to add you can also just clone repository, rathe
 - **Everyone**
     - Please just watch, we don't want a lot of conflicts, just a few.
 
-## Branch
-
-## Checkout
-
-## Merge Branch
-
 ## gitignore
+
+## Remove Files from the Staged Area
+```git rm <file to unstage>```
+
+## Replace a File in the Working Directory with the One in the Repo
+```git restore <file to replace with the repo version>```
+
+## Branches
+
+### Change Branch in Working Directory
+```git checkout <branch name>```
+
+### Merge Branch into Parent Branch
+
 
 
