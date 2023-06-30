@@ -27,6 +27,7 @@
   - [Linux](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent?platform=linux)
 - Have [git](https://github.com/git-guides/install-git) installed on your computer 
 - Have a text editor you like available to modify files.
+- From a command prompt/terminal know how to navigate to different directories.
 
 ### 
 ---
@@ -139,7 +140,7 @@ The demo will have 3 groups
     
     ![An image of the github page showing the new button in the top right](./images/github_repo.png)
     
-    - Initialize an existing local repository
+    - Initialize an existing local repository, it should have some files already.
         ```
         cd <location to make repo>
         git init
@@ -160,35 +161,80 @@ The demo will have 3 groups
     - NONE
 
 ### Clone Repo
-- **Primary** - 
-- **Secondary** - 
-- **Everyone** - 
+If you don't already have files to add you can also just clone repository, rather than initializing and adding the remote like we did above.
+- **Primary** 
+    - Walk through where to find the address to clone from the github page.
+    - ![An image showing the github page for a repository, with the <>Code button pressed, showing the clone tab with SSH selected.  This shows the location of the remote repository.](./images/clone_address.png)
+- **Secondary** 
+    - Follow everyone so you have a copy.
+- **Everyone** 
+    - Clone the repository to a location on your computer.
+    ```
+    cd <location on computer to place repository>
+    git clone <location of remote repository>
+    ```
 
-### Make changes
-- **Primary** - 
-- **Secondary** - 
-- **Everyone** - 
+### Update remote repository
+- **Primary** 
+    - Make a change to one of the files 
+    - Push changes to the remote
+        ```
+        git status
+        git add <file to add>
+        git status
+        git commit -m 'showing a change to the file'
+        git push
+        ```
+    - Show the changes in the github page
+- **Secondary**
+    - follow everyone
+- **Everyone** 
+    - Pull the changes to your working repository
+        ```
+        git fetch
+        git merge
+        ```
+        or 
+        ```
+        git pull
+        ```
+    - Create a new file with your name and favorite coding extension
+    - Push your file and wait for everyone to finish pushing theirs
+        ```
+        git status
+        git add <file to add>
+        git status
+        git commit -m 'creating my (<name>) file'
+        git push
+        ```
+    - Pull the changes back down
+        ```
+        git pull
+        ```
+    
+    We should each now have everyone's files in our working directory. without any problems.
 
-### Status
-- **Primary** - 
-- **Secondary** - 
-- **Everyone** - 
-
-### Add 
-
-### Commit 
-
-### Push 
-
-### Fetch
-
-### Merge
-
-## Pull
-
-## Merge
-
-## Conflicts
+### Resolving Conflicts
+- **Secondary**
+    - Select a file and modify 2 lines
+    - Push the changes
+        ```
+        git add <file to add>
+        commit -m 'I hope no one else is working on this file'
+        git push
+        ```
+- **Primary**
+    - In the same file the secondary is modifying also modify 2 lines.
+        - A line the secondary didn't modify.
+        - A line the secondary did modify.
+    - Push the changes. It should say you need to fetch first.  The primary follows the seconday so everyone can see how to resolve the conflict.
+        ```
+        git add <file to add>
+        commit -m 'creating conflicts'
+        git push
+        ```
+- **Everyone**
+    - Please just watch, we don't want a lot of conflicts, just a few.
 
 ## Branch
 
