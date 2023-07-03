@@ -31,7 +31,7 @@
     - [Creating a Branch](#creating-a-branch)
     - [Rename Branch](#rename-branch)
     - [Change Branch in Working Directory (checkout)](#change-branch-in-working-directory)
-    - [Merge Branch into Parent Branch](#merge-branch-in-working-directory)
+    - [Merge Branch into Parent Branch](#merge-branch-into-parent-directory)
     
 ## Do ahead of time
 - Have the lab slack open for sharing link
