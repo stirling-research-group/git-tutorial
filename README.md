@@ -28,8 +28,10 @@
 - [Replace a File in the Working Directory with the One in the Repo (restore)](#replace-a-file-in-the-working-directory-with-the-one-in-the-repo)
 - [Save Changes to Come Back to (stash)](#save-changes-to-come-back-to)
 - [Branches](#branches)
-    - [Checkout](#Checkout)
-    - [Merge Branch](#merge-branch)
+    - [Creating a Branch](#creating-a-branch)
+    - [Rename Branch](#rename-branch)
+    - [Change Branch in Working Directory (checkout)](#change-branch-in-working-directory)
+    - [Merge Branch into Parent Branch](#merge-branch-in-working-directory)
     
 ## Do ahead of time
 - Have the lab slack open for sharing link
