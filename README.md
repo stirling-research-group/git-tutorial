@@ -8,6 +8,7 @@
         - [Check Status (status)](#check-status)
     - [Staging Area](#staging-area)
         - [Move File to the Staging Area (add)](#move-file-to-the-staging-area)
+        - [Remove Files from the Staged Area (rm)](#remove-files-from-the-staged-area)
     - [Local Repository](#local-repository)
         - [Commit Files (commit)](#commit-files)
         - [Repository Structure](#repository-structure)
@@ -23,8 +24,9 @@
     - [Update Remote Repository](#update-remote-repository)
     - [Resolving Conflicts](#resolving-conflicts)
 - [gitignore](#gitignore)
-- [Remove Files from the Staged Area (rm)](#remove-files-from-the-staged-area)
+- [See the Differences Between Versions (diff)](#see-the-differences-between-versions)
 - [Replace a File in the Working Directory with the One in the Repo (restore)](#replace-a-file-in-the-working-directory-with-the-one-in-the-repo)
+- [Save Changes to Come Back to (stash)](#save-changes-to-come-back-to)
 - [Branches](#branches)
     - [Checkout](#Checkout)
     - [Merge Branch](#merge-branch)
@@ -81,6 +83,9 @@ Displays the status of the various files in the working directory.
 ```git add <filename>```
 
 ![An image showing the use of "git add", followed by "git status" showing the added file in green in the staging area.](./images/add.png)
+
+## Remove Files from the Staged Area
+```git rm <file to unstage>```
 
 ---
 ### Local Repository
@@ -242,22 +247,53 @@ If you don't already have files to add you can also just clone repository, rathe
     - In the same file the secondary is modifying also modify 2 lines.
         - A line the secondary didn't modify.
         - A line the secondary did modify.
-    - Push the changes. It should say you need to fetch first.  The primary follows the seconday so everyone can see how to resolve the conflict.
+    - Push the changes. It should say you need to fetch first.  The primary follows the secondary so everyone can see how to resolve the conflict.
         ```
         git add <file to add>
         commit -m 'creating conflicts'
         git push
         ```
+    - Look at the conflict and select which one to go with deleting the section to remove.
 - **Everyone**
     - Please just watch, we don't want a lot of conflicts, just a few.
 
 ## gitignore
+- A text file that specifies files to ignore in the same directory as the file, this is named '.gitignore'.
+- The '*' is a wildcard character which represents all characters and represents one or more characters.
+- ```*.<extension>``` ignores all files of that extension type in the same directory, for example ```*.csv``` will ignore all csv files.
+- Whole directories can be ignored as well ```<folder name>/*```, this will ignore everything in this folder.
+- .gitignore files can contain themselves if you would like it to just ignore the files on your computer.  They can also be committed to the repo if everyone is going to share the .gitignore.
+- More patterns can be found in the [git documentation](https://git-scm.com/docs/gitignore).
+- **Primary**
+    - Create .gitignore file for the directory.
+    - Create some files and a directory to ignore.
+    - Add them to the .gitignore using ```status``` to show when they stop showing up.
+- **Secondary**
+    - Follow everyone
+- **Everyone**
+    - Just watch and absorb.
 
-## Remove Files from the Staged Area
-```git rm <file to unstage>```
+## See the Differences Between Versions
+```git diff <file to check>```
+- This shows the difference between the file in the working directory and the one in the staging area.
+
+```git diff HEAD <file to check>```
+
+- This shows the difference between the file in the staged area and the most recent one in the repository.
+- There are other ways of checking the difference between commits or other fancier things, but are less frequently used.
+- For longer commits you may need to use <kbd>Enter</kbd> to scroll through the output, and <kbd>q</kbd> to exit.
+- Handy if you have been bad about regular commits and need to figure out the changes you have made to make your commit message, *but this will **never** happen to you because you are going to **always** be good about regular commits.* Right?... ***Right***?
+
+TODO: ADD IMAGE
 
 ## Replace a File in the Working Directory with the One in the Repo
 ```git restore <file to replace with the repo version>```
+- If you have decided your updates are too far gone for you to make them work or you just want to get rid of your uncommitted changes.
+
+## Save Changes to Come Back to
+```git stash <files to stash>```
+- I have used this when needing to merge. I have yet to unstash something.
+
 
 ## Branches
 
