@@ -300,7 +300,7 @@ TODO: ADD IMAGE
 
 ## Branches
 Branches are a way of creating an area where 
-![An image showing a main branch with multiple commits, and a second branch coming off it with multiple commits. These branches come back together to a new merge commit.](.images/branch.png)
+![An image showing a main branch with multiple commits, and a second branch coming off it with multiple commits. These branches come back together to a new merge commit.](./images/branch.png)
 
 From: https://www.atlassian.com/git/tutorials/using-branches/git-merge
 
@@ -308,7 +308,7 @@ From: https://www.atlassian.com/git/tutorials/using-branches/git-merge
 ```git checkout -b <new branch name> <parent branch name>```
 This creates a new branch from the parent branch, and makes that the active branch in the working directory.
 
-![A terminal showing a call to "git branch" where only "main" exists; followed by a call to "git checkout -b branch-demo main"; followed by a call to "git branch" where there there are two branches, main and branch-demo, where branch-demo is active.](.images/new-branch.png)
+![A terminal showing a call to "git branch" where only "main" exists; followed by a call to "git checkout -b branch-demo main"; followed by a call to "git branch" where there there are two branches, main and branch-demo, where branch-demo is active.](./images/new-branch.png)
 
 ### rename branch
 ```git branch -m <new name to use>```
@@ -316,7 +316,7 @@ This creates a new branch from the parent branch, and makes that the active bran
 
 ### Change Branch in Working Directory
 ```git checkout <branch name>```
-![A terminal window showing a call to git branch where "branch-demo" is the active branch; followed by a call to "git checkout main"; followed by a call to git branch showing "main" as the active branch.](.images/checkout.png)
+![A terminal window showing a call to git branch where "branch-demo" is the active branch; followed by a call to "git checkout main"; followed by a call to git branch showing "main" as the active branch.](./images/checkout.png)
 
 ### Merge Branch into Parent Branch
 
