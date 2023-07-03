@@ -32,7 +32,10 @@
     - [Rename Branch](#rename-branch)
     - [Change Branch in Working Directory (checkout)](#change-branch-in-working-directory)
     - [Merge Branch into Parent Branch](#merge-branch-into-parent-branch)
-    
+
+## Disclaimer
+**This is just a quick overview of common ways of using git.  There is a ton of stuff this doesn't cover.  If you need more than this the web will likely have answers.**
+ 
 ## Do ahead of time
 - Have the lab slack open for sharing link
 - Have a GitHub account with SSH Setup
@@ -43,7 +46,6 @@
 - Have a text editor you like available to modify files.
 - From a command prompt/terminal know how to navigate to different directories.
 
-### 
 ---
 ## Background
 ### What's that
@@ -301,7 +303,7 @@ TODO: ADD IMAGE
 
 
 ## Branches
-Branches are a way of creating an area where 
+Branches are a way of creating an area where you can work on something; feature, bugfix, etc.; without making changes to the main branch.
 ![An image showing a main branch with multiple commits, and a second branch coming off it with multiple commits. These branches come back together to a new merge commit.](./images/branch.png)
 
 From: https://www.atlassian.com/git/tutorials/using-branches/git-merge
@@ -321,6 +323,11 @@ This creates a new branch from the parent branch, and makes that the active bran
 ![A terminal window showing a call to git branch where "branch-demo" is the active branch; followed by a call to "git checkout main"; followed by a call to git branch showing "main" as the active branch.](./images/checkout.png)
 
 ### Merge Branch into Parent Branch
-
+```
+git checkout <branch to merge into>
+git merge <branch to merge from>
+git branch -d <branch that was merged from if you want to delete it>
+```
+![Terminal with the main branch shown as active; "git merge branch-demo" called showing fast forward of two files; followed by a call to "git branch"; followed by a call to "git branch -d branch-demo" with a return saying the branch was deleted; followed by a call to "git branch" where only main remains.](./images/merge.png)
 
 
