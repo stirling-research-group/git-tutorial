@@ -304,15 +304,15 @@ Branches are a way of creating an area where
 
 From: https://www.atlassian.com/git/tutorials/using-branches/git-merge
 
-### Creating branch
+### Creating a Branch
 ```git checkout -b <new branch name> <parent branch name>```
 This creates a new branch from the parent branch, and makes that the active branch in the working directory.
 
-![A terminal showing a call to "git branch" where only "main" exists; followed by a call to "git checkout -b branch-demo main"; followed by a call to "git branch" where there there are two branches, main and branch-demo, where branch-demo is active.](./images/new-branch.png)
+![A terminal showing a call to "git branch" where only "main" exists; followed by a call to "git checkout -b branch-demo main"; followed by a call to "git branch" where there there are two branches, main and branch-demo, where branch-demo is active.](./images/new_branch.png)
 
-### rename branch
+### Rename Branch
 ```git branch -m <new name to use>```
-- **Use cautausly as this can create some issues if other people haven't renamed their branches**
+- **Use cautiously as this can create some issues if other people haven't renamed their branches**
 
 ### Change Branch in Working Directory
 ```git checkout <branch name>```
