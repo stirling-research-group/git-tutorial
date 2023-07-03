@@ -1,0 +1,4 @@
+.gitignore
+#demoFiles/*
+#*.xls*
+#*.csv
