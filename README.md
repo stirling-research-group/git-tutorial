@@ -8,7 +8,6 @@
         - [Check Status (status)](#check-status)
     - [Staging Area](#staging-area)
         - [Move File to the Staging Area (add)](#move-file-to-the-staging-area)
-        - [Remove Files from the Staged Area (rm)](#remove-files-from-the-staged-area)
     - [Local Repository](#local-repository)
         - [Commit Files (commit)](#commit-files)
         - [Repository Structure](#repository-structure)
@@ -24,6 +23,7 @@
     - [Update Remote Repository](#update-remote-repository)
     - [Resolving Conflicts](#resolving-conflicts)
 - [gitignore](#gitignore)
+- [Remove Files from Tracking (rm)](#remove-files-from-tracking)
 - [See the Differences Between Versions (diff)](#see-the-differences-between-versions)
 - [Replace a File in the Working Directory with the One in the Repo (restore)](#replace-a-file-in-the-working-directory-with-the-one-in-the-repo)
 - [Save Changes to Come Back to (stash)](#save-changes-to-come-back-to)
@@ -83,9 +83,6 @@ Displays the status of the various files in the working directory.
 ```git add <filename>```
 
 ![An image showing the use of "git add", followed by "git status" showing the added file in green in the staging area.](./images/add.png)
-
-## Remove Files from the Staged Area
-```git rm <file to unstage>```
 
 ---
 ### Local Repository
@@ -273,6 +270,12 @@ If you don't already have files to add you can also just clone repository, rathe
 - **Everyone**
     - Just watch and absorb.
 
+## Remove Files from Tracking
+```git rm <file to remove>```
+- Removes the file from the working directory and removes it from the repo going forward.
+- If the file is already deleted stops if from being tracked going forward.
+TODO: add image.
+
 ## See the Differences Between Versions
 ```git diff <file to check>```
 - This shows the difference between the file in the working directory and the one in the staging area.
@@ -296,9 +299,24 @@ TODO: ADD IMAGE
 
 
 ## Branches
+Branches are a way of creating an area where 
+![An image showing a main branch with multiple commits, and a second branch coming off it with multiple commits. These branches come back together to a new merge commit.](.images/branch.png)
+
+From: https://www.atlassian.com/git/tutorials/using-branches/git-merge
+
+### Creating branch
+```git checkout -b <new branch name> <parent branch name>```
+This creates a new branch from the parent branch, and makes that the active branch in the working directory.
+
+![A terminal showing a call to "git branch" where only "main" exists; followed by a call to "git checkout -b branch-demo main"; followed by a call to "git branch" where there there are two branches, main and branch-demo, where branch-demo is active.](.images/new-branch.png)
+
+### rename branch
+```git branch -m <new name to use>```
+- **Use cautausly as this can create some issues if other people haven't renamed their branches**
 
 ### Change Branch in Working Directory
 ```git checkout <branch name>```
+![A terminal window showing a call to git branch where "branch-demo" is the active branch; followed by a call to "git checkout main"; followed by a call to git branch showing "main" as the active branch.](.images/checkout.png)
 
 ### Merge Branch into Parent Branch
 
