@@ -13,6 +13,7 @@
         - [Repository Structure](#repository-structure)
         - [Files not to use git for](#files-not-to-use-git-for)
     - [Remote Repository](#remote-repository)
+        - [Visibility](#visibility)
         - [Send Update to the Remote (push)](#send-update-to-the-remote)
         - [Update the Local Repo Based on the Remote Repo (fetch)](#update-the-local-repo-based-on-the-remote-repo)
         - [Update the Working Directory from the Local Repository (merge)](#update-the-working-directory-from-the-local-Repository)
@@ -32,6 +33,7 @@
     - [Rename Branch](#rename-branch)
     - [Change Branch in Working Directory (checkout)](#change-branch-in-working-directory)
     - [Merge Branch into Parent Branch](#merge-branch-into-parent-branch)
+- [Best Practices Summary](#best-practices-summary)
 
 ## Disclaimer
 **This is just a quick overview of common ways of using git.  There is a ton of stuff this doesn't cover.  If you need more than this the web will likely have answers.**
@@ -55,8 +57,8 @@
 
 ---
 ## Structure
-- Can be done totally locally but often uses a central repository (repo) so it is easier to collaborate.
-- Each system has its own repository which is a complete history of the changes that have been committed and can synchronize one system’s repo with the central repo.
+- Can be done totally locally but often uses a central remote repository (repo) so it is easier to collaborate.
+- Each system has its own local repository which is a complete history of the changes that have been committed and can synchronize one system’s repo with the central repo.
 
 ![An image of the working directory, staging area, and repository.  There is an arrow labeled "checkout the project" pointing from the repository to the working direction, an arrow labeled "stage fixes" pointing from the working directory to the staging area, and an arrow labeled "commit" pointing from the staging area to the repository.](./images/git_local_areas.png)  
 
@@ -125,6 +127,12 @@ It has the same repository (when everyone is updated), as the remote repositorie
 ![An image showing the working directory, staging area, committed files (local repository), and remote repository.  There are is an arrow labeled "git add" pointing from the working directory to the staging area, an arrow labeled "git commit" pointing from the staging area to the local repository, an arrow labeled "git push" pointing from the local repository to the remote repository, an arrow labeled "git fetch" pointing from the remote repository to the local repository, and two arrows pointing from the local repository to the working directory labeled "git checkout" and "git merge".](./images/remote.png)
 
 from: https://phoenixnap.com/kb/how-git-works
+
+#### Visibility
+- Public - Anyone on the internet can see it and download the repository.
+- Private - Only people with read or greater access can see the repository.
+    - For GitHub some features are limited to public repositories.
+- [Information on setting visibility for GitHub](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/managing-repository-settings/setting-repository-visibility)
 
 #### Send Update to the Remote
 ```git push```
@@ -330,5 +338,15 @@ git merge <branch to merge from>
 git branch -d <branch that was merged from if you want to delete it>
 ```
 ![Terminal with the main branch shown as active; "git merge branch-demo" called showing fast forward of two files; followed by a call to "git branch"; followed by a call to "git branch -d branch-demo" with a return saying the branch was deleted; followed by a call to "git branch" where only main remains.](./images/merge.png)
+
+## Best Practices Summary
+- Commit early and often so the commit message is specific.
+- Only commit the files directly associated with the commit.
+- Only commit code that is working or make clear what isn't working.
+- Don't use git for:
+    - Jupyter Notebooks
+    - CAD Files
+    - Data Files
+    - Any large files
 
 
