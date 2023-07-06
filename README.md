@@ -38,11 +38,12 @@
  
 ## Do ahead of time
 - Have the lab slack open for sharing link
+- Have [git](https://github.com/git-guides/install-git) installed on your computer 
 - Have a GitHub account with SSH Setup
   - [Windows](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent?platform=windows)
   - [Mac](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent?platform=mac)
   - [Linux](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent?platform=linux)
-- Have [git](https://github.com/git-guides/install-git) installed on your computer 
+  - **For the University of Michigan repositories you will need to authorize the SSH key with with SSO.**  This can be done through Settings->SSH and GPG keys, where you will find a button next to the key where you can sign into your school account.
 - Have a text editor you like available to modify files.
 - From a command prompt/terminal know how to navigate to different directories.
 
