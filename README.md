@@ -250,7 +250,7 @@ If you don't already have files to add you can also just clone repository, rathe
     We should each now have everyone's files in our working directory without any problems.
 
 ### Resolving Conflicts
-![An image with a command prompt at the top with a "git push" command that is rejected because the tip of the current branch is behind.  This is followed by a "git merge"  which results in a merge conflict in File1.txt.  Below is a text editor with File1.txt open.  This shows the two lines that are conflicting seperated by 7 equal signs.](.images/conflict.png)
+![An image with a command prompt at the top with a "git push" command that is rejected because the tip of the current branch is behind.  This is followed by a "git merge"  which results in a merge conflict in File1.txt.  Below is a text editor with File1.txt open.  This shows the two lines that are conflicting separated by 7 equal signs.](./images/conflict.png)
 - **Secondary**
     - Select a file and modify 2 lines
     - Push the changes
@@ -293,7 +293,6 @@ If you don't already have files to add you can also just clone repository, rathe
 ```git rm <file to remove>```
 - Removes the file from the working directory and removes it from the repo going forward.
 - If the file is already deleted stops if from being tracked going forward.
-TODO: add image.
 
 ## See the Differences Between Versions
 ```git diff <file to check>```
