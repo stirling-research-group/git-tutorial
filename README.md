@@ -101,7 +101,11 @@ Displays the status of the various files in the working directory.
 
 **Takes the staged files and moves (commits) them to the local repository**
 - Do it often and only stage files that are relevant.
-- Give descriptive messages about what was done.
+- Give descriptive messages about what was done, this should be relatively short.
+  - If you need a more information about what was done you can add a longer description in a second message. 
+  
+  ```git commit -m ‘<short commit message>’ -m ‘<more informative description of changes>’```
+  
 - Make commits only for code that is working, or note the issue.
 
 ![An image showing the use of "git commit"](./images/commit.png)
@@ -144,19 +148,19 @@ from: https://phoenixnap.com/kb/how-git-works
 #### Update the Local Repo Based on the Remote Repo
 ```git fetch```
 
-TODO: add image
+![An image showing a call to "git fetch" which then displays some text showing that changes are being pulled down from the remote.](./images/fetch.png)
 
 Update
 
 #### Update the Working Directory from the Local Repository
 ```git merge```
 
-TODO: add image
+![An image showing a call to "git fetch" which then displays some text showing that changes are being pulled down from the remote.  This is followed by a call to "git merge" showing that things were added to File2.txt by green +.](./images/merge.png)
 
 #### Fetch and Merge
 ```git pull```
 
-TODO: add image
+![An image showing a call to "git pull".  The return is essentially the combination of the fetch and merge calls above.](./images/pull.png)
 
 ---
 ## Demo 
@@ -339,7 +343,7 @@ git checkout <branch to merge into>
 git merge <branch to merge from>
 git branch -d <branch that was merged from if you want to delete it>
 ```
-![Terminal with the main branch shown as active; "git merge branch-demo" called showing fast forward of two files; followed by a call to "git branch"; followed by a call to "git branch -d branch-demo" with a return saying the branch was deleted; followed by a call to "git branch" where only main remains.](./images/merge.png)
+![Terminal with the main branch shown as active; "git merge branch-demo" called showing fast forward of two files; followed by a call to "git branch"; followed by a call to "git branch -d branch-demo" with a return saying the branch was deleted; followed by a call to "git branch" where only main remains.](./images/merge_branch.png)
 
 ## Best Practices Summary
 - Commit early and often so the commit message is specific.
