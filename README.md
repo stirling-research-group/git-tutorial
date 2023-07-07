@@ -306,7 +306,9 @@ TODO: add image.
 - For longer commits you may need to use <kbd>Enter</kbd> to scroll through the output, and <kbd>q</kbd> to exit.
 - Handy if you have been bad about regular commits and need to figure out the changes you have made to make your commit message, *but this will **never** happen to you because you are going to **always** be good about regular commits.* Right?... ***Right***?
 
-TODO: ADD IMAGE
+![An image showing a call to "git status" showing File2.txt has been modified, followed by a call to "git add File2.txt" to stage the changes. The file was then modified in a text editor to delete a line and add a line.  There is then a call to "git diff", this shows the deleted line with a minus sign in front of it, and the added line with a plus sign in front of it.](./images/diff_terminal.png)
+
+![An image showing the GitHub web interface for a commit.  This shows the line deleted above with a leading minus sign, and the added lines with leading plus signs.  This is the difference between commits.](./images/diff_commit.png)
 
 ## Replace a File in the Working Directory with the One in the Repo
 ```git restore <file to replace with the repo version>```
