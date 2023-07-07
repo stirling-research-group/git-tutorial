@@ -130,6 +130,7 @@ from: https://phoenixnap.com/kb/how-git-works
 
 #### Visibility
 - Public - Anyone on the internet can see it and download the repository.
+- Internal - People in the enterprise (University of Michigan) can see the repository.
 - Private - Only people with read or greater access can see the repository.
     - For GitHub some features are limited to public repositories.
 - [Information on setting visibility for GitHub](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/managing-repository-settings/setting-repository-visibility)
@@ -138,7 +139,7 @@ from: https://phoenixnap.com/kb/how-git-works
 ```git push```
 - Many commits can be done prior to pushing
 
-TODO: add image
+![A terminal demonstrating "git push".  There is a line with "git add File2.txt" followed by a "git commit" call.  The last line called is "git push" followed by by the return showing the updates being sent to the remote repository](./images/push.png)
 
 #### Update the Local Repo Based on the Remote Repo
 ```git fetch```
@@ -245,6 +246,7 @@ If you don't already have files to add you can also just clone repository, rathe
     We should each now have everyone's files in our working directory without any problems.
 
 ### Resolving Conflicts
+![An image with a command prompt at the top with a "git push" command that is rejected because the tip of the current branch is behind.  This is followed by a "git merge"  which results in a merge conflict in File1.txt.  Below is a text editor with File1.txt open.  This shows the two lines that are conflicting seperated by 7 equal signs.](.images/conflict.png)
 - **Secondary**
     - Select a file and modify 2 lines
     - Push the changes
