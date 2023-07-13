@@ -150,8 +150,6 @@ from: https://phoenixnap.com/kb/how-git-works
 
 ![An image showing a call to "git fetch" which then displays some text showing that changes are being pulled down from the remote.](./images/fetch.png)
 
-Update
-
 #### Update the Working Directory from the Local Repository
 ```git merge```
 
