@@ -340,7 +340,15 @@ This creates a new branch from the parent branch, and makes that the active bran
 ```
 git checkout <branch to merge into>
 git merge <branch to merge from>
+```
+If you are no longer to develop on a branch you should delete it.
+To delete the branch locally you can use:
+```
 git branch -d <branch that was merged from if you want to delete it>
+```
+To delete it on the remote repository you can use:
+```
+git push origin -d <branch that was merged from if you want to delete it>
 ```
 ![Terminal with the main branch shown as active; "git merge branch-demo" called showing fast forward of two files; followed by a call to "git branch"; followed by a call to "git branch -d branch-demo" with a return saying the branch was deleted; followed by a call to "git branch" where only main remains.](./images/merge_branch.png)
 
